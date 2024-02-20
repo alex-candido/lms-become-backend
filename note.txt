@@ -1,0 +1,9 @@
+## Gerenciamento Ramificações do Sistema
+
+- master
+  - **Descrição**
+    - Branch principal do projeto
+
+- staging
+  - **Descrição**
+    - Branch de homologação
