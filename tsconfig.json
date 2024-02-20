@@ -19,8 +19,5 @@
     "noFallthroughCasesInSwitch": false,
     "allowJs": true
   },
-  "include": [
-    "./src",
-    "./test"
-  ]
+  "include": ["./src", "./src/nestjs/", "src/nestjs/test", "test"]
 }
