@@ -7,13 +7,33 @@ import * as Joi from 'joi';
 import { join } from 'path';
 
 type DB_SCHEMA_TYPE = {
-  API_PORT: string;
   DATABASE_URL: string;
+  API_PORT: number;
+  ORIGIN: string;
+  CLOUDINARY_URL: string;
+  CLOUDINARY_CLOUD_NAME: string;
+  CLOUDINARY_API_KEY: number;
+  CLOUDINARY_API_SECRET: string;
+  REDIS_URL: string;
+  REDIS_HOST: string;
+  REDIS_PORT: number;
+  REDIS_PASS: string;
+  REDIS_USER: string;
 };
 
 export const CONFIG_DB_SCHEMA: Joi.StrictSchemaMap<DB_SCHEMA_TYPE> = {
-  API_PORT: Joi.string().required(),
   DATABASE_URL: Joi.string().required(),
+  API_PORT: Joi.number().required(),
+  ORIGIN: Joi.string().required(),
+  CLOUDINARY_URL: Joi.string().required(),
+  CLOUDINARY_CLOUD_NAME: Joi.string().required(),
+  CLOUDINARY_API_KEY: Joi.number().required(),
+  CLOUDINARY_API_SECRET: Joi.string().required(),
+  REDIS_URL: Joi.string().required(),
+  REDIS_HOST: Joi.string().required(),
+  REDIS_PORT: Joi.number().required(),
+  REDIS_PASS: Joi.string().required(),
+  REDIS_USER: Joi.string().required(),
 };
 
 export type CONFIG_SCHEMA_TYPE = DB_SCHEMA_TYPE;
