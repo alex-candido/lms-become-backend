@@ -1,8 +1,8 @@
-import { CONFIG_SCHEMA_TYPE } from '@nest/config-module/config.module';
 import { RedisModuleAsyncOptions } from '@nestjs-modules/ioredis';
 import { ConfigService } from '@nestjs/config';
+import { CONFIG_SCHEMA_TYPE } from '../config.module';
 
-export const cacheManagerOptions: RedisModuleAsyncOptions = {
+export const CacheManagerConfig: RedisModuleAsyncOptions = {
   useFactory: async (config: ConfigService<CONFIG_SCHEMA_TYPE>) => {
     return {
       type: 'single',

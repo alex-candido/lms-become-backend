@@ -25,7 +25,7 @@
       "@nest/*": ["./src/nestjs/*"]
     }
   },
-  "include": ["./src", "./test", "@types"],
+  "include": ["./src", "./test", "@types", "prisma"],
   "exclude": ["node_modules", "dist"],
   "watchOptions": {
     "watchFile": "priorityPollingInterval"

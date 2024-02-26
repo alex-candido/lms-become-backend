@@ -1,8 +1,9 @@
-import { CacheModule } from '@nest/cache-module/cache.module';
-import { ConfigModule } from '@nest/config-module/config.module';
 import { Module } from '@nestjs/common';
 
-import { PrismaModule } from '@nest/prisma-module/prisma.module';
+import { CacheModule } from '@nest/@share/cache/cache.module';
+import { ConfigModule } from '@nest/@share/config/config.module';
+import { PrismaModule } from '@nest/@share/prisma/prisma.module';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 

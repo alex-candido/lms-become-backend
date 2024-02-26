@@ -1,4 +1,4 @@
-export interface CacheObjectI {
+export interface ICacheObjectDTO {
   accessToken: string;
   userID: string;
 }

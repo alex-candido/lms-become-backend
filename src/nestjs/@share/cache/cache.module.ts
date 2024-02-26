@@ -1,11 +1,13 @@
 import { RedisModule } from '@nestjs-modules/ioredis';
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { cacheManagerOptions } from '../@share/configs/cache.option';
+
+import { CacheManagerConfig } from '@nest/@share/config/implementations/cache.config';
+
 @Module({
   imports: [
     RedisModule.forRootAsync({
-      ...cacheManagerOptions,
+      ...CacheManagerConfig,
       inject: [ConfigService],
     }),
   ],
