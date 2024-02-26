@@ -1,12 +1,14 @@
+import { CacheModule } from '@nest/cache-module/cache.module';
+import { ConfigModule } from '@nest/config-module/config.module';
 import { Module } from '@nestjs/common';
 
-import { CacheModule } from '@nestjs/cache-module/cache.module';
-import { ConfigModule } from '@nestjs/config-module/config.module';
-import { PrismaModule } from '@nestjs/prisma-module/prisma.module';
+import { PrismaModule } from '@nest/prisma-module/prisma.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [ConfigModule.forRoot(), CacheModule, PrismaModule],
-  controllers: [],
-  providers: [],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

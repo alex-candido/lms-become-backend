@@ -1,7 +1,8 @@
 import { RedisModule } from '@nestjs-modules/ioredis';
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { CONFIG_SCHEMA_TYPE } from '../config-module/config.module';
+
+import { CONFIG_SCHEMA_TYPE } from '@nest/config-module/config.module';
 
 @Module({
   imports: [

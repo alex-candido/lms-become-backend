@@ -22,7 +22,7 @@
     "allowJs": true,
     "paths": {
       "@core/*": ["./src/core/*"],
-      "@nestjs/*": ["./src/nestjs/*"]
+      "@nest/*": ["./src/nestjs/*"]
     }
   },
   "include": ["./src", "./test"],
