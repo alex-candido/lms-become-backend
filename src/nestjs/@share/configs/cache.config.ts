@@ -1,4 +1,4 @@
-import { CONFIG_SCHEMA_TYPE } from '@nest/config-module/config.module';
+import { CONFIG_SCHEMA_TYPE } from '@nest/config/@config.module';
 import { RedisModuleAsyncOptions } from '@nestjs-modules/ioredis';
 import { ConfigService } from '@nestjs/config';
 
