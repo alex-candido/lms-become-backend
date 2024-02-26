@@ -2,7 +2,7 @@ import { RedisModule } from '@nestjs-modules/ioredis';
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
-import { CacheManagerConfig } from '@nest/@share/config/implementations/cache.config';
+import { CacheManagerConfig } from '@nest/@share/configs/cache.config';
 
 @Module({
   imports: [
