@@ -27,3 +27,29 @@ export const ROUTES = {
     FEED: 'feed',
   },
 };
+
+export const API_DESCRIPTION = (API_PORT: string) => {
+  const data = {
+    Message: `🚀 Server started ${API_PORT}! \n`,
+    API: 'lms-become-backend',
+    port: `${API_PORT}`,
+    version: '1.0.0',
+    description: 'LMS Api',
+    author: 'Alex Cândido <alex.candido.tec@gmail.com>',
+    environment: 'Development',
+    operating_system: 'Linux',
+    nodejs: 'v20.11.0',
+    repository: ' https://github.com/alex-candido/lms-become-backend',
+  };
+  return `
+    ${data.Message}
+    Api: ${data.API}
+    Port: ${data.port}
+    Version: ${data.version}
+    Description: ${data.description}
+    Author: ${data.author}
+    Environment: ${data.environment}
+    Operating System: ${data.operating_system}
+    NodeJS: ${data.nodejs}
+    Repository: ${data.repository}\n`;
+};

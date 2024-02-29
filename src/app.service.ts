@@ -9,7 +9,7 @@ export class AppService {
 
   async getHello(key: string, message: string) {
     await this.redis.set(key, message);
-    const redisData = await this.redis.get(key);
-    return { redisData };
+    const server = await this.redis.get(key);
+    return { server };
   }
 }
