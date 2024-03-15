@@ -19,8 +19,9 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.config.ts",
     "test:e2e:watch": "jest --config ./test/jest-e2e.config.ts --watch",
-    "prisma:generate": "prisma generate --schema ./src/nestjs/prisma-module/prisma/schema.prisma",
-    "prisma:push": "prisma db push --schema ./src/nestjs/prisma-module/prisma/schema.prisma"
+    "prisma:generate": "dotenv -e ./envs/.env -- prisma generate --schema ./prisma/schema.prisma",
+    "prisma:push": "dotenv -e ./envs/.env -- prisma db push --schema ./prisma/schema.prisma",
+    "prisma:migrate": "dotenv -e ./envs/.env -- prisma migrate dev --schema ./prisma/schema.prisma"
   },
   "dependencies": {
     "@nestjs-modules/ioredis": "^2.0.1",
@@ -40,6 +41,7 @@
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.3.0",
     "ioredis": "^5.3.2",
     "joi": "^17.12.1",
     "prisma": "^5.5.2",

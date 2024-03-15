@@ -8,8 +8,11 @@ import { join } from 'path';
 
 type DB_SCHEMA_TYPE = {
   DATABASE_URL: string;
+  DATABASE_URL_ELEPHANT: string;
   API_PORT: number;
   ORIGIN: string;
+  NESTAUTH_JWT_SECRET: string;
+  NESTAUTH_JWT_REFRESH_SECRET: string;
   CLOUDINARY_URL: string;
   CLOUDINARY_CLOUD_NAME: string;
   CLOUDINARY_API_KEY: number;
@@ -23,8 +26,11 @@ type DB_SCHEMA_TYPE = {
 
 export const CONFIG_DB_SCHEMA: Joi.StrictSchemaMap<DB_SCHEMA_TYPE> = {
   DATABASE_URL: Joi.string().required(),
+  DATABASE_URL_ELEPHANT: Joi.string().required(),
   API_PORT: Joi.number().required(),
   ORIGIN: Joi.string().required(),
+  NESTAUTH_JWT_SECRET: Joi.string().required(),
+  NESTAUTH_JWT_REFRESH_SECRET: Joi.string().required(),
   CLOUDINARY_URL: Joi.string().required(),
   CLOUDINARY_CLOUD_NAME: Joi.string().required(),
   CLOUDINARY_API_KEY: Joi.number().required(),

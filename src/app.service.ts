@@ -1,15 +1,8 @@
-import { InjectRedis } from '@nestjs-modules/ioredis';
 import { Injectable } from '@nestjs/common';
-
-import Redis from 'ioredis';
 
 @Injectable()
 export class AppService {
-  constructor(@InjectRedis() private readonly redis: Redis) {}
-
-  async getHello(key: string, message: string) {
-    await this.redis.set(key, message);
-    const server = await this.redis.get(key);
-    return { server };
+  getHello(): string {
+    return '<div class="lms-become-backend;" style="position: absolute; top: 0; bottom: 0, right: 0; left: 0; height: 100%; width: 100%; background-color: rgb(13, 17, 23);"> <div class="lms-container" style="margin: 0 auto; width: 80%"> <div class="lms-section" style="padding: 2rem 0"> <div class="lms-card" style="padding: 1.5rem; background-color: rgb(13, 17, 23); border-width: 1px; border-color: rgb(48, 54, 61); border-style: solid; border-radius: 6px; color: rgb(230, 237, 243);"><div class="lms-card-container"><div class="lms-card-header"></div> <div class="lms-card-content"> <div class="lms-card-title"><div class="lms-card-field"><div class="title" style="width: 100%; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; font-size: 21px; font-weight: 600; padding-bottom: 0.5rem;">Lms Become Backend</div></div></div> <hr style="background: rgb(33, 38, 45);"> <div class="lms-card-list"><div class="lms-list-content" style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Noto Sans, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; font-size: 1.2rem"><ul dir="lms-list" style="margin-top: 1.5rem; margin-bottom: 1.5rem;"><li class="lms-list-item" style="padding-bottom: 0.5rem;"><span class="name">🚀 Server started 3333!</span></li><li class="lms-list-item" style="padding-bottom: 0.5rem;"><span class="name">Api: lms-become-backend</span></li><li class="lms-list-item" style="padding-bottom: 0.5rem;" ><span class="name">Port: 3333</span></li> <li class="lms-list-item" style="padding-bottom: 0.5rem;"><span class="name">Version: 1.0.0</span></li><li class="lms-list-item" style="padding-bottom: 0.5rem;"><span class="name">Environment: Development</span></li><li class="lms-list-item" style="padding-bottom: 0.5rem;"><span class="name">Operating System: Linux</span></li><li class="lms-list-item" style="padding-bottom: 0.5rem"><span class="name">NodeJS: v20.11.0</span> </li><li class="lms-list-item" style="padding-bottom: 0.5rem"><span class="name">Author: Alex Cândido</span></li><li class="lms-list-item" style="padding-bottom: 0.5rem"><span class="name">By: Weqsoftware </span></li><li><span class="name">Repository: <a href="https://github.com/alex-candido/lms-become-backend"  target="_blank">https://github.com/alex-candido/lms-become-backend</a></span></li></ul></div></div> </div> <hr> <div class="lms-card-footer"> <div class="lms-card-stacks" style="display: flex; gap: 0.5rem; padding-top: 0.5rem;">  <div class="lms-card-field"><code><img height="50" title="ts" src="https://skillicons.dev/icons?i=ts" /></code></div> <div class="lms-card-field"> <code><img height="50" title="nodejs" src="https://skillicons.dev/icons?i=nodejs" /></code> </div><div class="lms-card-field"> <code><img height="50" title="express" src="https://skillicons.dev/icons?i=express" /></code> </div><div class="lms-card-field"> <code><img height="50" title="nestjs" src="https://skillicons.dev/icons?i=nestjs" /></code> </div> </div> </div></div></div> </div> </div> </div>';
   }
 }

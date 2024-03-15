@@ -9,4 +9,12 @@ export function applyGlobalConfig(app: INestApplication) {
       errorHttpStatusCode: 422,
     }),
   );
+  // app.useGlobalPipes(
+  //   new ValidationPipe({
+  //     whitelist: true,
+  //     forbidNonWhitelisted: true,
+  //     transform: true,
+  //     errorHttpStatusCode: 422,
+  //   }),
+  // );
 }

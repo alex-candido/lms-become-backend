@@ -3,7 +3,7 @@ import { hash } from 'bcrypt';
 
 import { CreateUserDto } from './dtos/create-user.dto';
 
-import { PrismaService } from '@nest/@share/prisma/implementations/prisma.service';
+import { PrismaService } from '@nest/@share/database/prisma/implementations/prisma.service';
 
 @Injectable()
 export class UsersService {
